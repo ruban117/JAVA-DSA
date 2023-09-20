@@ -79,7 +79,105 @@ public class AdvancePattern{
         }
      }
 
-    
+
+    public static void  ZeroOneTriangle(int lines){
+        for(int i=1;i<=lines;i++){
+            for(int j=1;j<=i;j++){
+                if((i+j)%2==0){
+                    System.out.print("1"+" ");
+                }
+                else{
+                    System.out.print("0"+" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void ButterflyPattern(int lines){
+        //first half
+        for(int i=1;i<=lines;i++){
+            //printing stars
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            //printing spaces
+            for(int j=1;j<=2*(lines-i);j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=lines;i>=1;i--){
+            //printing stars
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            //printing spaces
+            for(int j=1;j<=2*(lines-i);j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void RhombusStarsPattern(int lines){
+        for(int i=1;i<=lines;i++){
+            for(int j=1;j<=(lines-i);j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=lines;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void Hollo_Rhombus_Stars_Pattern(int lines){
+        for(int i=1;i<=lines;i++){
+            for(int j=1;j<=(lines-i);j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=lines;j++){
+                if(j==1 || j==lines ||i==1 || i==lines){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void Diamond_Pattern(int lines){
+        //first half
+        for(int i=1;i<=lines;i++){
+            for(int j=1;j<=(lines-i);j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=(2*i-1);j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //second half
+        for(int i=lines;i>=1;i--){
+            for(int j=1;j<=(lines-i);j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=(2*i-1);j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
 
     public static void main(String[] args) {
         System.out.println("For Hollow Pattern");
@@ -101,5 +199,26 @@ public class AdvancePattern{
         System.out.print("How many Lines?:- ");
         int lines3=sc.nextInt();
         FloidTriangle(lines3);
+        System.out.println("\n\nFor Half Zero One Triangle Pattern\n\n");
+        System.out.print("How many Lines?:- ");
+        int lines4=sc.nextInt();
+        ZeroOneTriangle(lines4);
+        System.out.println("\n\nFor Butterfly Pattern\n\n");
+        System.out.print("How many Lines?:- ");
+        int lines5=sc.nextInt();
+        ButterflyPattern(lines5);
+        System.out.println("\n\nFor Rhombus Star Pattern\n\n");
+        System.out.print("How many Lines?:- ");
+        int lines6=sc.nextInt();
+        RhombusStarsPattern(lines6);
+        System.out.println("\n\nFor Hollo Rhombus Star Pattern\n\n");
+        System.out.print("How many Lines?:- ");
+        int lines7=sc.nextInt();
+        Hollo_Rhombus_Stars_Pattern(lines7);
+        System.out.println("\n\nFor Diamond Star Pattern\n\n");
+        System.out.print("How many Lines?:- ");
+        int lines8=sc.nextInt();
+        Diamond_Pattern(lines8);
+
     }
 }
