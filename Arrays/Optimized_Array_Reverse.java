@@ -1,4 +1,4 @@
-package Arrays;
+
 import java.util.Scanner;
 public class Optimized_Array_Reverse {
     public static void Swap(int arr[]){
