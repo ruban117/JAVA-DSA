@@ -178,6 +178,33 @@ public class AdvancePattern{
         }
     }
 
+    public static void NumberPyramid(int lines){
+        for(int i=1;i<=lines;i++){
+            for(int j=1;j<=(lines-i);j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                System.out.print(i+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void Palindrome_Pattern(int lines){
+        for(int i=1;i<=lines;i++){
+            for(int j=1;j<=(lines-i);j++){
+                System.out.print(" ");
+            }
+            for(int j=i;j>=1;j--){
+                System.out.print(j);
+            }
+            for(int j=2;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+
 
     public static void main(String[] args) {
         System.out.println("For Hollow Pattern");
@@ -219,6 +246,14 @@ public class AdvancePattern{
         System.out.print("How many Lines?:- ");
         int lines8=sc.nextInt();
         Diamond_Pattern(lines8);
+        System.out.println("\n\nFor Number Pyramid Pattern\n\n");
+        System.out.print("How many Lines?:- ");
+        int lines9=sc.nextInt();
+        NumberPyramid(lines9);
+        System.out.println("\n\nFor Palindrome Number Pyramid Pattern\n\n");
+        System.out.print("How many Lines?:- ");
+        int lines10=sc.nextInt();
+        Palindrome_Pattern(lines10);
 
     }
 }
