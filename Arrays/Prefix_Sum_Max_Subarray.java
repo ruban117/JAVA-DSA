@@ -21,7 +21,7 @@ public class Prefix_Sum_Max_Subarray {
         return max_sum;
     }
     public static void main(String[] args) {
-        int arr[]={2,4,6,8};
+        int arr[]={2,-4,-6,7};
         System.out.println(PrefixSumMaxSubarray(arr));
     }
 }
